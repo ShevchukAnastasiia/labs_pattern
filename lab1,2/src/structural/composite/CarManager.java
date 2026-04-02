@@ -4,7 +4,7 @@ import java.util.List;
 
 public class CarManager {
 
-    public CarPartComposite composeElectricCar() {
+    public CarPartComposite composeDieselCar() {
         // Створюємо дрібні деталі
         var engineParts = List.of(new Part("Ротор"), new Part("Статор"));
         var bodyParts = List.of(new Part("Двері"), new Part("Капот"), new Part("Багажник"));
