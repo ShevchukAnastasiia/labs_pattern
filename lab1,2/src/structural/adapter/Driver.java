@@ -7,7 +7,7 @@ public class Driver {
         this.Vehicle = Vehicle;
     }
 
-    public void startjourney() {
+    public void startJourney() {
         Vehicle.drive();
     }
 }
