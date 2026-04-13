@@ -20,7 +20,6 @@ public abstract class CarRobot {
         System.out.println(name() + ": перехід у режим енергозбереження.");
     }
 
-    // Логіка обробки команд через Switch (як у викладача)
     private void action(Action action) {
         switch (action) {
             case INITIALIZE -> initialize();
@@ -32,7 +31,6 @@ public abstract class CarRobot {
         }
     }
 
-    // Прийом масиву команд (Varargs)
     public void action(Action... actions) {
         Arrays.stream(actions).forEach(this::action);
     }
