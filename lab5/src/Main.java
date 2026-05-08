@@ -3,9 +3,7 @@ import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
 
-// ==========================================
 // 1. EXECUTE AROUND (Діагностика авто)
-// ==========================================
 class DiagnosticScanner {
     private DiagnosticScanner() {
         System.out.println(">> [СТАРТ] Підключення сканера OBD-II...");
@@ -35,19 +33,18 @@ class DiagnosticScanner {
     }
 }
 
-// ==========================================
 // 2. DEFAULT FACTORY METHOD (Виробництво)
-// ==========================================
+
 interface Vehicle {
     void drive();
 }
 
 class PremiumVehicle implements Vehicle {
-    public void drive() { System.out.println("   🚗 Їдемо з комфортом (Преміум)"); }
+    public void drive() { System.out.println("   Їдемо з комфортом (Преміум)"); }
 }
 
 class BudgetVehicle implements Vehicle {
-    public void drive() { System.out.println("   🚙 Їдемо економно (Бюджет)"); }
+    public void drive() { System.out.println("   Їдемо економно (Бюджет)"); }
 }
 
 @FunctionalInterface
@@ -60,14 +57,13 @@ interface VehicleManufacturer {
     }
 }
 
-// ==========================================
 // 3. STRATEGY (Розрахунок вартості автосалону)
-// ==========================================
+
 record CarForSale(String model, double price, boolean isElectric) {}
 
-// ==========================================
+
 // 4. DECORATOR (Тюнінг через композицію)
-// ==========================================
+
 record TunedCar(String description, double price) {}
 
 
