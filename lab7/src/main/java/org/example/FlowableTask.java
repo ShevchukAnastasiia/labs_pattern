@@ -40,7 +40,7 @@ public class FlowableTask {
                 .onBackpressureDrop(item -> dropped.incrementAndGet())
                 .observeOn(Schedulers.io())
                 .doOnNext(item -> {
-                    Thread.sleep(10); 
+                    Thread.sleep(10);
                     processed.incrementAndGet();
                 })
                 .blockingSubscribe(
